@@ -1,0 +1,445 @@
+{
+    "detailed_description": {
+        "overview": "The dataset appears to be a university academic and administrative record system, capturing detailed information about students' academic, financial, and personal profiles. Its purpose is likely to support institutional management activities such as enrollment tracking, financial aid distribution, academic advising, and dormitory assignments. The dataset contains 31 attributes (columns) that cover diverse aspects, including student identification, academic programs, fees, residency status, and more. Each row (tuple) represents an individual student and their associated data for the Fall 2024 semester. Numerical fields like 'tuition_fee', 'lab_fee', 'services_fee', 'credits_completed_previously', and 'credits_registered' provide quantifiable insights into academic and financial standing. Categorical fields such as 'department', 'program_degree', and 'residency_status' classify students into groups for analysis. Additionally, there are timestamp fields ('thesis_proposal_date', 'thesis_submission_date') and location-related attributes ('city', 'state', 'campus_zone') that add temporal and spatial dimensions to the data. Overall, the structure is tabular, clearly organized into rows (students) and columns (attributes).",
+        "domain_knowledge": "This dataset belongs to the higher education domain, specifically focusing on student information management. Universities often maintain such datasets to oversee academic progress, allocate resources, and ensure compliance with administrative policies. The dataset's attributes like 'academic_year', 'semester', 'department', and 'program_degree' reflect the academic structure and enrollment patterns. Financial attributes like 'tuition_fee', 'aid_type', and 'financial_aid_amount' are crucial for managing funding, scholarships, and financial planning. Attributes like 'advisor_rank' and 'advisor_id' suggest faculty involvement in guiding students. Dormitory-related fields ('dorm_room_id', 'dorm_building') are significant for housing coordination. The inclusion of 'country', 'citizenship', and 'residency_status' indicates the dataset's relevance to international student management and compliance with legal or financial aid requirements. Such data is essential for generating institutional reports, improving student services, and ensuring effective resource allocation."
+    },
+    "column_meanings": {
+        "student_id": "The 'student_id' column serves as a unique identifier for each student in the dataset. It ensures that each record (row) corresponds to a single, distinct student, facilitating data management, lookup, and operations like joining datasets or tracking individual academic and administrative details.",
+        "first_name": "The 'first_name' column contains the given names or personal names of students. It serves as a key identifier when combined with other columns such as 'last_name' or 'student_id'. This column is primarily used for personal identification and communication purposes, ensuring the university can address students by their appropriate names.",
+        "last_name": "The 'last_name' column contains the family or surname of students. It serves as a key identifier for individuals, often used in conjunction with the 'first_name' column to uniquely identify a person in the dataset. This column is valuable for sorting, grouping, or filtering records based on familial names and can also be used for communication or administrative purposes.",
+        "academic_year": "The 'academic_year' column represents the current academic year of the student at the university. It is a numerical value that indicates the progression of a student in their program of study, typically numbered sequentially starting from 1 (first year) and increasing each academic year. For instance, a value of '1' indicates that the student is in their first year, while '6' indicates their sixth year. This column is important for tracking students' academic progress, categorizing them into cohorts, and determining their eligibility for certain courses, programs, or services.",
+        "semester": "The 'semester' column represents the academic term or session associated with the data entries for the students. It indicates the specific part of the academic year (e.g., 'Fall 2024') during which the data is relevant. This column helps in identifying the temporal context of the students' academic and administrative information. Since all values in this column are 'Fall 2024', it signifies that the dataset is focused exclusively on this particular semester.",
+        "department": "The 'department' column represents the academic department to which a student is affiliated. Departments are organizational units within the university that group together related fields of study or academic disciplines, such as Engineering, English, or Physics. This column helps categorize students based on their area of academic focus and is likely used for resource allocation, departmental reporting, and program-specific analysis.",
+        "program_degree": "The 'program_degree' column represents the type of academic degree program in which a student is enrolled. Values like 'BS', 'BA', 'MS', and 'PhD' denote specific degree levels\u2014Bachelor of Science, Bachelor of Arts, Master of Science, and Doctor of Philosophy, respectively. This column is essential for categorizing students by their academic program, facilitating analyses such as enrollment trends, academic progression, and resource planning for different degree levels.",
+        "residency_status": "The 'residency_status' column represents the residency classification of a student as it pertains to university policies, tuition rates, and eligibility for certain benefits or programs. It categorizes students based on their geographical or legal residency status, which often impacts tuition fees and financial aid eligibility. Typical values like 'In-State', 'Out-of-State', 'International', and 'Exchange' indicate whether a student resides within the same state as the university, outside it, is from a different country, or is participating in a university exchange program.",
+        "citizenship": "The 'citizenship' column indicates the nationality status of a student, categorizing whether they are a domestic student or a foreign national. This information is critical for various administrative and legal purposes, such as determining eligibility for financial aid, tuition fees, residency requirements, and compliance with international student regulations. It helps the university in understanding the composition of its student body and tailoring services to meet the needs of both domestic and international students.",
+        "status": "The 'status' column represents the current academic standing or enrollment status of a student in the university. The values ('Withdrawn', 'Probation', 'Active', 'Graduated') indicate distinct phases or conditions of a student's relationship with the institution. For example, 'Active' signifies ongoing enrollment, 'Graduated' indicates completion of the program, 'Withdrawn' means the student has left the institution, and 'Probation' denotes a warning or conditional enrollment status due to academic or other issues. This column is crucial for tracking and managing students' progress and institutional engagement.",
+        "campus_zone": "The 'campus_zone' column represents the specific zones or areas within the university campus where students are assigned, located, or associated with. These zones could be used for administrative, logistical, or geographical purposes, such as organizing resources, assigning dormitories, scheduling classes, or managing facilities. In this dataset, the two distinct values, 'Zone A' and 'Zone B', suggest a division of the campus into at least two distinct regions.",
+        "aid_type": "The 'aid_type' column represents the type of financial aid that a student is receiving. Financial aid helps support students in funding their education and can come in different forms, such as scholarships, tuition waivers, grants, or loans. Each value in this column categorizes the specific kind of aid provided to the student, indicating how their educational expenses are being supplemented. This column is critical for analyzing financial support patterns among students and assessing the distribution of different aid types.",
+        "advisor_rank": "The 'advisor_rank' column represents the hierarchical classification of academic advisors based on their professional standing or experience within the institution. For example, 'Adjunct' could indicate part-time or external faculty, 'Junior Faculty' might represent early-career faculty members or those with less experience, and 'Senior Faculty' likely refers to highly experienced or tenured faculty members. This column is essential for categorizing advisors for administrative purposes, resource allocation, and understanding the level of expertise available to guide students.",
+        "tuition_fee": "The 'tuition_fee' column represents the monetary cost of tuition that a student is required to pay for their enrollment in a specific academic program during a semester. This fee typically varies based on factors such as the student's academic program, residency status (e.g., in-state, out-of-state, international), and potentially the number of credits registered. It serves as a critical financial metric used for billing, financial aid calculations, and institutional revenue analysis.",
+        "lab_fee": "The 'lab_fee' column represents the monetary amount charged to students for laboratory-related activities as part of their academic program. This fee can vary based on the courses or programs a student is enrolled in, as well as the resources required for hands-on lab sessions or experiments. It is a numeric measurement of the additional cost incurred for access to specialized lab facilities, materials, and equipment.",
+        "services_fee": "The 'services_fee' column represents the monetary amount charged to students for various institutional services. This fee can cover a wide range of non-tuition expenses such as library services, technology and IT support, health and wellness programs, extracurricular activities, campus transportation, and other student support services. It is a numeric value that varies between students depending on their enrollment status, program of study, or specific services availed.",
+        "credits_completed_previously": "The 'credits_completed_previously' column represents the total number of academic credits a student has successfully completed prior to the current semester. These credits may have been earned in previous semesters at the same institution, or transferred from another institution if applicable. This column plays a crucial role in determining a student's academic standing, eligibility for certain courses or programs, and graduation requirements.",
+        "credits_registered": "The 'credits_registered' column represents the number of academic credits a student has registered for during a particular semester. Academic credits are a measure of the workload associated with a specific course or set of courses. This column plays a crucial role in understanding students' academic engagement, workload, and progress toward their degree completion.",
+        "thesis_proposal_date": "The 'thesis_proposal_date' column represents the specific date on which a student formally submits their thesis proposal. This date is crucial for tracking the academic progress of students in research-based programs, as it marks the beginning of their thesis work. It provides a timeline for academic milestone management and ensures adherence to program schedules.",
+        "thesis_submission_date": "The 'thesis_submission_date' column represents the specific date on which a student submitted their thesis for review or evaluation. This is a crucial academic milestone, marking the completion of a significant body of academic work, such as a master's thesis or doctoral dissertation. The dates in this column are used for tracking academic progress, ensuring compliance with submission deadlines, and facilitating administrative processes like scheduling evaluations or graduation.",
+        "internship_hours": "The 'internship_hours' column likely represents the total number of hours a student has spent on internships as part of their academic or professional development. This data can be used to evaluate a student's practical experience, compliance with program requirements, or eligibility for graduation or specific certifications. It also provides insight into workload distribution and professional readiness.",
+        "country": "The 'country' column represents the country of origin or residence of the students in the dataset. It serves as an identifier for grouping or categorizing students based on their nationality or geographical location. This information could be used for analytics related to demographic studies, international student management, or compliance with international student policies.",
+        "university_email": "The 'university_email' column stores the official email addresses assigned to students by the university. These email addresses typically follow a standard format, combining the student's first and last names (e.g., 'james.mitchell') with the university's domain (e.g., '@univ.edu'). The primary purpose of this column is to serve as a unique point of contact for academic and administrative communication between the university and the student. It ensures that all official correspondence, such as notifications about grades, deadlines, or financial aid, is sent through a secure and standardized channel.",
+        "gov_id": "The 'gov_id' column represents a government-issued identifier for students, such as a Social Security Number (SSN) in the United States or its equivalent in other countries. This identifier is used for official documentation, verification, and administrative purposes. It is likely unique for each individual and helps in securely linking each student's academic records with external governmental or institutional requirements.",
+        "total_invoice_amount": "The 'total_invoice_amount' column represents the total monetary amount billed to a student for their expenses during the academic term. This could include tuition fees, lab fees, services fees, and other associated costs. It reflects the overall financial obligation of the student before the application of any financial aid or scholarships.",
+        "financial_aid_amount": "The 'financial_aid_amount' column represents the monetary value of financial aid (e.g., scholarships, grants, or subsidies) allocated to each student within the dataset. This amount is likely calculated based on various factors such as the student\u2019s financial need, academic merit, or specific eligibility criteria. It helps determine how much of the total cost of attendance is covered by the institution or external funding sources, and also aids in calculating the remaining expenses a student needs to pay.",
+        "zip_code": "The 'zip_code' column represents postal codes assigned to specific geographic regions for mail delivery purposes. In this dataset, it likely indicates the area where each student resides or is associated with, providing a geographic dimension to the data. This column can be useful for analyzing student demographics, regional trends, or service allocation based on location.",
+        "city": "The 'city' column represents the names of cities associated with students. This could refer to their permanent address, current residence, or a registered location relevant to their academic records. It provides a geographical dimension to the dataset, enabling analyses such as demographic distribution, regional trends in enrollment, or financial aid allocation by location.",
+        "state": "The 'state' column represents the geographic state or territory associated with the student. This could be their place of residence, location of enrollment, or another significant administrative designation. In the context of a university dataset, it likely helps in categorizing students based on regional demographics, residency status, or for compliance with state-specific regulations or financial aid rules. The values in this column correspond to standard abbreviations for U.S. states and territories.",
+        "advisor_id": "The 'advisor_id' column uniquely identifies academic advisors assigned to students. Each value represents a specific advisor, typically encoded with a prefix (indicating department or specialization) and a numeric identifier. This column plays a crucial role in connecting students to their respective advisors, facilitating academic guidance and administrative oversight.",
+        "dorm_room_id": "The 'dorm_room_id' column represents unique identifiers assigned to each dormitory room within the university housing system. Each value in this column corresponds to a specific dormitory room, and it helps in allocating and managing student housing. Since there are only 100 distinct values and 100,000 rows, it implies that multiple students may share the same dormitory room, making this column critical for tracking room assignments and capacity.",
+        "dorm_building": "The 'dorm_building' column identifies the specific dormitory building where a student resides on campus. It serves as a categorical indicator for housing assignments and is critical for administrative purposes such as room allocation, facility management, and student housing organization. The values represent distinct buildings within the campus housing system."
+    },
+    "syntactic_columns": [
+        "student_id",
+        "thesis_proposal_date",
+        "thesis_submission_date",
+        "university_email",
+        "gov_id",
+        "zip_code",
+        "state",
+        "advisor_id"
+    ],
+    "categorical_columns": {
+        "academic_year": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "semester": [
+            "Fall 2024"
+        ],
+        "department": [
+            "Chemistry",
+            "Engineering",
+            "Mathematics",
+            "History",
+            "Computer Science",
+            "English",
+            "Arts",
+            "Biology",
+            "Physics",
+            "Nursing"
+        ],
+        "program_degree": [
+            "BS",
+            "BA",
+            "PhD",
+            "MS"
+        ],
+        "residency_status": [
+            "International",
+            "Out-of-State",
+            "Exchange",
+            "In-State"
+        ],
+        "citizenship": [
+            "Domestic",
+            "Foreign_National"
+        ],
+        "status": [
+            "Probation",
+            "Active",
+            "Graduated",
+            "Withdrawn"
+        ],
+        "campus_zone": [
+            "Zone B",
+            "Zone A"
+        ],
+        "aid_type": [
+            "Grant",
+            "Scholarship",
+            "Loan",
+            "Tuition_Waiver"
+        ],
+        "advisor_rank": [
+            "Adjunct",
+            "Senior Faculty",
+            "Junior Faculty"
+        ],
+        "country": [
+            "USA",
+            "Mexico",
+            "China",
+            "India",
+            "Canada",
+            "UK"
+        ],
+        "state": [
+            "VT",
+            "TX",
+            "NE",
+            "HI",
+            "RI",
+            "WY",
+            "MS",
+            "MN",
+            "UT",
+            "CO",
+            "OK",
+            "DC",
+            "OH",
+            "CT",
+            "KS",
+            "SD",
+            "GA",
+            "MH",
+            "MI",
+            "NC",
+            "LA",
+            "SC",
+            "WV",
+            "MD",
+            "MA",
+            "NM",
+            "WI",
+            "AL",
+            "NY",
+            "ID",
+            "GU",
+            "WA",
+            "MO",
+            "IA",
+            "AZ",
+            "ND",
+            "PR",
+            "AR",
+            "DE",
+            "ME",
+            "FM",
+            "MT",
+            "PW",
+            "VA",
+            "AS",
+            "VI",
+            "CA",
+            "IL",
+            "IN",
+            "NH",
+            "NJ",
+            "OR",
+            "FL",
+            "MP",
+            "PA",
+            "AK",
+            "TN",
+            "KY",
+            "NV"
+        ],
+        "advisor_id": [
+            "ADV_MAT_6",
+            "ADV_ENG_4",
+            "ADV_PHY_2",
+            "ADV_GEN_02",
+            "ADV_MAT_9",
+            "ADV_COM_7",
+            "ADV_PHY_7",
+            "ADV_MAT_7",
+            "ADV_COM_9",
+            "ADV_MAT_3",
+            "ADV_COM_5",
+            "ADV_COM_2",
+            "ADV_MAT_1",
+            "ADV_PHY_0",
+            "ADV_PHY_8",
+            "ADV_COM_0",
+            "ADV_PHY_9",
+            "ADV_ENG_5",
+            "ADV_MAT_5",
+            "ADV_GEN_01",
+            "ADV_MAT_2",
+            "ADV_ENG_7",
+            "ADV_COM_6",
+            "ADV_COM_3",
+            "ADV_MAT_4",
+            "ADV_COM_1",
+            "ADV_ENG_0",
+            "ADV_COM_8",
+            "ADV_ENG_3",
+            "ADV_ENG_1",
+            "ADV_PHY_3",
+            "ADV_ENG_8",
+            "ADV_MAT_8",
+            "ADV_PHY_5",
+            "ADV_GEN_03",
+            "ADV_ENG_6",
+            "ADV_ENG_2",
+            "ADV_PHY_4",
+            "ADV_MAT_0",
+            "ADV_ENG_9",
+            "ADV_PHY_1",
+            "ADV_COM_4",
+            "ADV_PHY_6"
+        ],
+        "dorm_room_id": [
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            142,
+            143,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            152,
+            153,
+            154,
+            155,
+            156,
+            157,
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199
+        ],
+        "dorm_building": [
+            "South Hall",
+            "East Wing",
+            "North Hall",
+            "West Wing"
+        ]
+    },
+    "special_values": {
+        "advisor_rank": null,
+        "semester": null,
+        "campus_zone": null,
+        "program_degree": null,
+        "department": null,
+        "aid_type": null,
+        "services_fee": [
+            "None"
+        ],
+        "status": null,
+        "last_name": [
+            "None"
+        ],
+        "student_id": null,
+        "residency_status": null,
+        "first_name": [
+            "None"
+        ],
+        "academic_year": null,
+        "citizenship": null,
+        "tuition_fee": [
+            null
+        ],
+        "lab_fee": [
+            "None"
+        ],
+        "thesis_submission_date": null,
+        "country": null,
+        "internship_hours": null,
+        "thesis_proposal_date": null,
+        "total_invoice_amount": [
+            "None"
+        ],
+        "credits_completed_previously": null,
+        "university_email": [
+            "None"
+        ],
+        "credits_registered": null,
+        "city": [
+            "None"
+        ],
+        "financial_aid_amount": [
+            "None"
+        ],
+        "gov_id": null,
+        "dorm_building": null,
+        "zip_code": [
+            "None"
+        ],
+        "advisor_id": null,
+        "state": null,
+        "dorm_room_id": null
+    },
+    "column_groups": [
+        [
+            "first_name",
+            "last_name"
+        ],
+        [
+            "academic_year",
+            "semester"
+        ],
+        [
+            "department",
+            "program_degree"
+        ],
+        [
+            "residency_status",
+            "citizenship",
+            "country"
+        ],
+        [
+            "aid_type",
+            "financial_aid_amount"
+        ],
+        [
+            "advisor_rank",
+            "advisor_id"
+        ],
+        [
+            "tuition_fee",
+            "lab_fee",
+            "services_fee"
+        ],
+        [
+            "credits_completed_previously",
+            "credits_registered"
+        ],
+        [
+            "thesis_proposal_date",
+            "thesis_submission_date"
+        ],
+        [
+            "university_email",
+            "gov_id"
+        ],
+        [
+            "zip_code",
+            "city",
+            "state"
+        ],
+        [
+            "dorm_room_id",
+            "dorm_building"
+        ],
+        [
+            "status"
+        ]
+    ],
+    "referencing_column_pairs": null
+}

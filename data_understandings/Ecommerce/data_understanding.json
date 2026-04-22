@@ -1,0 +1,206 @@
+{
+    "detailed_description": {
+        "overview": "This dataset provides granular information about e-commerce transactions, encompassing a wide range of details that capture the lifecycle of a purchase, from order placement to delivery or cancellation. The dataset is structured with 27 attributes, each representing a key component of the transaction, including but not limited to identifiers (e.g., 'line_item_id', 'order_id', 'transaction_id'), customer details (e.g., 'customer_id', 'zip_code', 'city', 'customer_segment'), product attributes (e.g., 'product_id', 'product_category', 'unit_price', 'unit_weight_kg'), and logistical data (e.g., 'order_date', 'ship_date', 'delivery_date', 'shipping_address', 'billing_address'). Financial aspects such as 'line_subtotal', 'tax_amount', 'shipping_cost', and 'line_total' are also captured, providing insights into transaction value and associated costs. Additionally, 'fraud_risk_score' highlights potential security concerns, while 'order_status' tracks the outcome of the transaction. The dataset's scope is global, as represented by the 'country' attribute, and it supports multiple currencies ('currency'), making it applicable to international e-commerce analysis. Its purpose appears to be enabling detailed investigations into customer behavior, product performance, fraud detection, and logistics optimization within the e-commerce domain.",
+        "domain_knowledge": "This dataset falls within the domain of e-commerce and digital retail, a sector characterized by the buying and selling of goods and services via the internet. The attributes reflect critical components of e-commerce operations, such as transaction processing, logistics, customer segmentation, and risk assessment. For example, 'order_status' and 'delivery_date' are key metrics for evaluating supply chain efficiency, while 'fraud_risk_score' is essential for mitigating financial losses due to fraudulent activities. The inclusion of diverse payment methods ('PayPal', 'Credit Card', 'Gift Card', etc.) and customer segments ('Standard', 'Corporate', 'Employee', 'Premium') reflects the dataset's applicability for targeted marketing and customer relationship management. Furthermore, the global scope ('country') and currency variations ('currency') highlight the dataset's relevance in analyzing international trade patterns and localized preferences. This dataset can be instrumental for businesses aiming to optimize operations, enhance customer satisfaction, and strengthen fraud prevention mechanisms."
+    },
+    "column_meanings": {
+        "line_item_id": "The 'line_item_id' column serves as a unique identifier for each line item in an order. In the context of e-commerce, a line item typically represents a single product or service included in an order. This column ensures that every individual product or service within the dataset can be distinctly identified, even if multiple items are associated with the same order.",
+        "order_id": "The 'order_id' column serves as a unique identifier for each order within the dataset. Each value in this column represents a distinct order placed by a customer, allowing for the tracking and analysis of specific transactions. This identifier is essential for linking related records across different tables in a relational database structure, ensuring data consistency and facilitating detailed analysis of order-related data, such as order status, financial details, and logistical information.",
+        "country": "The 'country' column represents the geographical location or nation associated with each transaction. This could signify the country of the customer, the shipping destination, or the transaction locale. It is a key attribute for analyzing regional sales performance, customer distribution, and market trends. Additionally, it could be used for filtering data by geographical region or for determining compliance with regional regulations.",
+        "currency": "The 'currency' column represents the type of currency used in a transaction. For example, 'USD' stands for US Dollar, 'EUR' for Euro, 'JPY' for Japanese Yen, 'GBP' for British Pound, and 'CAD' for Canadian Dollar. Its role is crucial in identifying the monetary unit associated with the transaction amount, which is essential for financial calculations, reporting, and analysis, especially in a multi-currency e-commerce environment.",
+        "order_status": "The 'order_status' column represents the current state or outcome of an order within the e-commerce system. It indicates whether the order has been shipped, is pending, has been cancelled, was returned, or has been successfully delivered. This column is critical for tracking the progression and resolution of orders, ensuring operational transparency, and enhancing customer satisfaction.",
+        "payment_method": "The 'payment_method' column represents the method of payment used by customers to complete their transactions. It provides insight into the preferred payment options among customers, such as 'Credit Card', 'Gift Card', 'PayPal', and 'Bank Transfer'. This information is useful for analyzing customer preferences, optimizing payment gateway integrations, and identifying trends in payment methods across different customer demographics or regions.",
+        "customer_segment": "The 'customer_segment' column categorizes customers into distinct groups based on their relationship or interaction type with the e-commerce platform. It represents the segmentation of customers for analysis and marketing purposes, with each segment ('Employee', 'Premium', 'Corporate', 'Standard') indicating a unique customer profile or tier. This segmentation helps businesses target specific customer needs, design tailored marketing campaigns, and analyze purchasing behavior effectively.",
+        "product_category": "The 'product_category' column represents the classification of products into distinct categories such as 'Clothing', 'Home', 'Services', 'Digital', 'Electronics', and 'Books'. This categorization helps in identifying and grouping products by their type or function, enabling analysis of product performance, customer preferences, and inventory management.",
+        "discount_applied": "The 'discount_applied' column represents the percentage discount that was applied to a specific transaction line item. It quantifies how much of a reduction in price was given for the purchase and is likely used to calculate promotions, offers, or special pricing incentives. The values indicate that this column captures fixed discount percentages, which are applied directly to transactions.",
+        "customer_id": "The 'customer_id' column serves as a unique identifier for each customer in the dataset. It plays a crucial role in linking transactions to specific customers, enabling the analysis of customer behavior, purchase history, and segmentation. The values in this column are unique for each customer and remain consistent across transactions by the same customer, making it essential for customer-level analysis such as loyalty tracking, fraud detection, and personalized marketing.",
+        "zip_code": "The 'zip_code' column represents postal or ZIP codes, which are numeric codes used by postal services to identify specific geographic regions or delivery areas. This information is typically used for shipping, billing, or demographic analysis in the context of e-commerce transactions. In this dataset, 'zip_code' plays a role in identifying the location associated with a customer's address, facilitating logistics planning and delivery optimization.",
+        "city": "The 'city' column represents the name of the city associated with a specific transaction. This could refer to the city where the customer is located, or where the order is being shipped to or billed from. The column provides geographic information that could be used for regional sales analysis, logistics planning, customer segmentation, or market targeting.",
+        "product_id": "The 'product_id' column uniquely identifies each individual product within the dataset. Each value corresponds to a specific product being sold in the e-commerce platform. The role of this column is crucial for tracking sales, inventory, and product-specific metrics such as popularity, revenue contribution, and return rates. It acts as a key identifier for linking product-related details across different datasets or tables.",
+        "unit_weight_kg": "The 'unit_weight_kg' column represents the weight of individual items or products in kilograms. This value is a quantitative measurement that provides insights into the physical characteristics of the product, particularly its weight. Such information is crucial for logistics, shipping cost calculations, inventory management, and packaging.",
+        "unit_price": "The 'unit_price' column represents the price for a single unit of a product in the e-commerce transaction. This value is typically used to calculate the total price of the items in an order by multiplying it with the quantity ordered. It provides insight into the pricing strategy of products, helps in financial analysis of sales, and is crucial for understanding revenue generation trends.",
+        "order_date": "The 'order_date' column represents the specific calendar date on which a customer placed an order in the e-commerce system. This information is crucial for analyzing sales trends over time, peak shopping periods, and seasonal patterns. It also helps in calculating metrics like order processing time, delivery time, and customer behavior analysis based on dates.",
+        "ship_date": "The 'ship_date' column represents the date on which the item, corresponding to the specific line item in an order, was shipped by the seller or warehouse. This is a key logistical attribute used to track the shipping timeline and assess operational efficiency. The field is essential for analyzing shipping performance, ensuring timely deliveries, and identifying delays or inefficiencies in the supply chain.",
+        "delivery_date": "The 'delivery_date' column represents the date on which the purchased item was delivered to the customer. It is a critical piece of logistical information that can be used to measure delivery efficiency, customer satisfaction, and adherence to expected delivery timelines. This field is essential for supply chain optimization and tracking delivery performance.",
+        "fraud_risk_score": "The 'fraud_risk_score' column represents a numerical assessment of the likelihood that a given transaction is fraudulent. It serves as a risk indicator, with higher values typically signifying greater suspicion of fraudulent activity. This score is likely calculated based on factors such as transaction patterns, customer behavior, and historical fraud data. The column plays a critical role in fraud detection and prevention strategies in e-commerce.",
+        "shipping_address": "The 'shipping_address' column represents a unique identifier for the address where the purchased items are to be delivered. This column is crucial for logistics and delivery processes, ensuring that items are routed to the correct destination. Given the sample values, which exhibit unique, encoded-like structures, these appear to be anonymized or hashed representations of actual shipping addresses.",
+        "billing_address": "The 'billing_address' column represents a unique identifier or code for the billing address associated with a specific transaction. Each value in this column is likely a hashed, encrypted, or anonymized representation of actual billing address details to ensure privacy and data security. This column is essential for linking billing information to a transaction, particularly for purposes such as invoicing, tax calculations, and payment verification.",
+        "quantity": "The 'quantity' column represents the number of units of a particular product included in a specific line item of an order. It indicates how many of the same product are being ordered in a single transaction line.",
+        "line_subtotal": "The 'line_subtotal' column represents the pre-tax subtotal for a specific line item in an order. This value accounts for the cost of the products in that line, excluding any taxes, shipping fees, or additional costs. It is a numeric measure of the financial value associated with individual order items before other charges are applied. This column is instrumental in calculating the overall value of an order and analyzing revenue contribution from specific products.",
+        "tax_amount": "The 'tax_amount' column represents the monetary value of taxes applied to an individual line item or transaction in the e-commerce dataset. This value is calculated based on applicable tax rates, which may vary by country, region, product type, or other factors. It provides insight into the tax component of the overall transaction cost and can be used for financial analysis, compliance reporting, and tax optimization strategies.",
+        "shipping_cost": "The 'shipping_cost' column represents the monetary amount charged to customers for shipping their orders. It reflects the cost associated with the delivery of goods and is an essential component of the total transaction cost. The values in this column provide insights into logistical expenses and pricing strategies.",
+        "line_total": "The 'line_total' column represents the total monetary value of a single line item in an order. It is computed as the sum of the product price (unit price), applicable taxes (tax amount), and shipping costs, minus any discounts applied. This column provides a crucial financial metric that contributes to the overall order total and allows for detailed transactional analysis and revenue tracking.",
+        "transaction_id": "The 'transaction_id' column serves as a unique identifier for each individual transaction in the dataset. It ensures that every transaction can be uniquely identified and distinguished from others, even if other attributes like order_id or customer_id are the same. This is critical for maintaining data integrity, tracking transaction-specific activities, and linking detailed records for analysis."
+    },
+    "syntactic_columns": [
+        "line_item_id",
+        "order_id",
+        "currency",
+        "zip_code",
+        "product_id",
+        "order_date",
+        "ship_date",
+        "delivery_date",
+        "shipping_address",
+        "billing_address",
+        "transaction_id"
+    ],
+    "categorical_columns": {
+        "country": [
+            "UK",
+            "Canada",
+            "Japan",
+            "Brazil",
+            "Italy",
+            "USA",
+            "France",
+            "Germany"
+        ],
+        "currency": [
+            "GBP",
+            "CAD",
+            "EUR",
+            "USD",
+            "JPY"
+        ],
+        "order_status": [
+            "Shipped",
+            "Cancelled",
+            "Delivered",
+            "Pending",
+            "Returned"
+        ],
+        "payment_method": [
+            "Gift Card",
+            "Bank Transfer",
+            "PayPal",
+            "Credit Card"
+        ],
+        "customer_segment": [
+            "Corporate",
+            "Employee",
+            "Standard",
+            "Premium"
+        ],
+        "product_category": [
+            "Home",
+            "Electronics",
+            "Digital",
+            "Books",
+            "Services",
+            "Clothing"
+        ],
+        "discount_applied": [
+            0.0,
+            10.0,
+            50.0,
+            20.0
+        ],
+        "quantity": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "shipping_cost": [
+            0.0,
+            10.0,
+            5.0,
+            15.0
+        ]
+    },
+    "special_values": {
+        "currency": null,
+        "order_date": null,
+        "country": null,
+        "product_id": [
+            "None"
+        ],
+        "zip_code": null,
+        "customer_id": [
+            "None"
+        ],
+        "order_id": [
+            "None"
+        ],
+        "customer_segment": null,
+        "discount_applied": null,
+        "city": [
+            "None"
+        ],
+        "product_category": null,
+        "order_status": null,
+        "payment_method": null,
+        "unit_weight_kg": null,
+        "line_item_id": null,
+        "unit_price": [
+            "None"
+        ],
+        "shipping_address": null,
+        "shipping_cost": null,
+        "billing_address": null,
+        "ship_date": null,
+        "fraud_risk_score": [
+            0
+        ],
+        "tax_amount": [
+            null
+        ],
+        "line_total": [
+            "None"
+        ],
+        "line_subtotal": [
+            "None"
+        ],
+        "delivery_date": null,
+        "quantity": null,
+        "transaction_id": [
+            "None"
+        ]
+    },
+    "column_groups": [
+        [
+            "line_item_id",
+            "order_id",
+            "transaction_id"
+        ],
+        [
+            "customer_id",
+            "customer_segment",
+            "zip_code",
+            "city"
+        ],
+        [
+            "product_id",
+            "product_category",
+            "unit_weight_kg",
+            "unit_price"
+        ],
+        [
+            "order_status",
+            "fraud_risk_score"
+        ],
+        [
+            "order_date",
+            "ship_date",
+            "delivery_date"
+        ],
+        [
+            "country",
+            "shipping_address",
+            "billing_address"
+        ],
+        [
+            "discount_applied",
+            "line_subtotal",
+            "tax_amount",
+            "shipping_cost",
+            "line_total"
+        ],
+        [
+            "currency",
+            "payment_method"
+        ]
+    ],
+    "referencing_column_pairs": null
+}

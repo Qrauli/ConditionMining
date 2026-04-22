@@ -1,0 +1,7 @@
+langchain-openai==0.3.7
+numpy==2.1.3
+pandas==3.0.0
+pydantic==2.10.6
+pysubgroup
+scikit-learn==1.8.0
+tenacity==9.0.0

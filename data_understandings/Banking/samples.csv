@@ -1,0 +1,31 @@
+application_id,applicant_id,household_id,loan_type,loan_purpose,application_status,applicant_segment,employment_status,credit_score,annual_income,loan_amount,dti_ratio,zip_code,city,state_code,interest_rate,property_value,down_payment,submission_date,approval_date
+0297f30c-c80a-4b7d-9612-3ab886bee424,U-4f4e0207,43480,Auto,Other,Approved,Employee,Self-Employed,684,115566.27,32829.44,0.063,33940,City_66,OR,5.58,0.0,0.0,2020-06-19,2020-07-02
+285a21eb-2ecf-4e5d-ba00-ae7a659b1a9d,37640d8c,57220,Auto,Purchase,Approved,Standard,Unemployed,624,90503.01,14665.61,0.327,37770,City_64,IL,4.68,17376.34,2710.73,2020-08-27,2020-09-12
+8b67fbaa-a364-4af8-ab28-d5dd20e289b1,2fcdf5e4,58691,Personal,Purchase,Closed,Standard,Employed,698,49160.72,55000.0,0.747,72049,City_83,OR,8.09,0.0,0.0,2020-02-17,2020-03-07
+c205e178-f1a8-4eea-9466-0a694dc2dbee,2eb941d4,35613,Mortgage,Education,Withdrawn,Standard,Unemployed,647,25479.68,13855.13,0.6,46463,City_CA_29,CA,3.38,17156.93,0.0,2021-11-30,
+b466a285-96fd-408b-9a46-c475c2006c44,U-fdd75304,66934,Auto,Education,Rejected,Sub-Prime,Retired,748,44090.99,20077.09,0.372,18675,City_TX_1,TX,8.5,0.0,0.0,2021-08-29,
+e328720e-cbf7-42f4-8f56-ded86e031f6d,f1be7690,72524,Personal,Purchase,Disbursed,Standard,Unemployed,734,39938.07,55000.0,0.499,21915,City_TX_27,TX,7.88,0.0,0.0,2020-09-21,2020-09-24
+4fe8e44a-4cb6-4918-b9ef-5dcd63889286,U-1221763a,13897,Personal,Purchase,Approved,Sub-Prime,Unemployed,706,65296.51,55000.0,0.36,56841,City_88,NV,6.6,0.0,0.0,2021-03-11,2021-03-28
+4a822567-d8de-4102-8509-02f6bd631fae,7e491da1,68687,Auto,Purchase,Approved,Standard,Unemployed,723,98918.1,13097.85,0.161,30867,City_56,NV,5.85,15552.1,2454.25,2022-04-02,2022-04-10
+cdc75501-5565-4b67-8714-33f3f575510e,e18bd13a,34496,Mortgage,Debt Consolidation,Approved,Standard,Retired,665,68201.92,34864.16,0.121,93810,City_CA_0,CA,7.52,39947.06,0.0,2022-04-01,2022-04-25
+a4001739-2b60-4834-b9a3-8beb50bd728e,2064cf96,73884,Mortgage,Debt Consolidation,Approved,Standard,Unemployed,649,60963.09,22952.84,0.42,65333,City_TX_34,TX,8.51,28030.53,0.0,2021-01-05,2021-02-03
+599f0c70-9d33-418e-bc12-db3fe807292a,U-01f18420,53035,Student,Debt Consolidation,Pending,Employee,Self-Employed,651,27213.7,12441.53,0.286,59727,City_14,OH,6.59,0.0,0.0,2022-03-16,
+6dc70ab5-6bdd-495c-8414-ee5608c69588,U-3d6b6cfd,14892,Auto,Education,Approved,Sub-Prime,Self-Employed,633,101507.24,5542.65,0.396,13905,City_CA_14,CA,5.07,0.0,0.0,2022-08-11,2022-09-02
+3cabe763-0725-4d83-a5aa-c2b06913681f,050a56c3,94515,Auto,Purchase,Approved,Standard,Employed,678,120758.02,49240.53,0.197,36071,City_FL_18,FL,5.54,62573.64,13333.11,2021-05-24,2021-06-15
+a7e16370-fea7-4996-b05d-1745b3431ae9,0556d8cb,89143,Auto,Refinance,Approved,Standard,Employed,623,71602.76,5804.18,0.591,95180,City_WA_7,WA,7.05,8706.27,0.0,2022-08-15,2022-08-29
+1ff8787c-8878-41a7-aa3f-a43c9fe86400,4008b77c,82288,Personal,Refinance,Disbursed,Standard,Retired,662,60002.12,55000.0,0.364,11398,City_22,OR,7.78,0.0,0.0,2020-10-15,2020-10-22
+57b56739-02bc-48d5-80f8-817afcd4d4b7,ac07cc16,42549,Mortgage,Refinance,Approved,Standard,Employed,668,42928.15,31163.29,0.302,82063,City_FL_45,FL,7.89,35481.93,0.0,2020-04-20,2020-04-30
+e8a127c3-09c6-4269-b134-d5e72ce10469,U-3277170f,75307,Mortgage,Purchase,Pending,Sub-Prime,Self-Employed,682,39048.43,39280.7,0.386,35203,City_NY_8,NY,4.17,47175.98,0.0,2022-04-03,
+e0330ffc-0d5e-4bd2-8ad9-bf403af3bcc2,6498c0c4,33721,Mortgage,Purchase,Disbursed,Standard,Self-Employed,668,85617.27,103048.21,0.19,29116,City_25,OH,4.56,120284.7,0.0,2021-01-04,2021-01-14
+d6ca0a9e-2cea-4439-9ab0-d82ae857df41,U-3ded5414,77140,Auto,Refinance,Pending,Sub-Prime,Employed,627,116922.64,35723.87,0.284,79163,City_FL_48,FL,5.59,53585.81,0.0,2022-08-02,
+3c60893b-df19-4c50-bcca-3bd9a7d367c0,1e8a402e,38435,Mortgage,Refinance,Rejected,Standard,Unemployed,774,175182.89,24333.91,0.222,24662,City_FL_29,FL,7.44,27887.17,0.0,2020-09-02,
+721b794e-88a4-4454-8c20-03e17e2644e6,U-838e5636,44270,Personal,Purchase,Rejected,Premium,Retired,669,50291.57,55000.0,0.22,79822,City_FL_40,FL,6.45,0.0,0.0,2022-02-12,
+6a34ecf1-684b-4a8e-ac6f-79fa5c178fb8,U-96212658,84996,Personal,Purchase,Withdrawn,Sub-Prime,Retired,638,70129.46,20620.17,0.178,94939,City_NY_29,NY,8.99,0.0,0.0,2020-09-11,
+8a37975e-af4f-440c-a2ba-6cdb3bc4f83a,952a8033,97765,Auto,Education,Withdrawn,Standard,Employed,721,80744.96,40218.47,0.374,45903,City_48,IL,3.28,0.0,0.0,2020-11-25,
+2e662f99-0ea3-4c30-b46c-1c0aca69c206,U-a0e235a0,13332,Personal,Education,Disbursed,Sub-Prime,Retired,689,37591.88,55000.0,0.511,85674,City_NY_7,NY,8.64,0.0,0.0,2020-12-24,2021-01-03
+ceb19d46-78b6-47c2-8c26-03b8b8cbdc4b,U-1ed509d2,98499,Employee,Purchase,Pending,Sub-Prime,Employed,680,170857.63,6597.5,0.297,78733,City_84,OR,3.0,0.0,0.0,2021-04-07,
+be1e70a6-5308-4744-b572-0c8a1cb02ac7,U-bcc2167a,88150,Student,Other,Pending,Premium,Unemployed,707,82584.81,12442.52,0.12,15962,City_52,OH,4.63,0.0,0.0,2022-06-10,
+2822da95-5341-4522-92fa-1820ba819611,U-4ff5960f,46994,Auto,Refinance,Approved,Sub-Prime,Self-Employed,694,39003.12,3041.44,0.173,45382,City_NY_39,NY,5.25,4562.16,0.0,2022-07-06,2022-07-31
+6e345397-47c2-46b1-a297-59a7725aa514,6d66be4d,48024,Mortgage,Other,Approved,Standard,Retired,681,158516.16,16572.31,0.353,74042,City_FL_27,FL,7.03,20238.41,0.0,2020-11-12,2020-11-27
+c17191d1-6b1b-4032-bd81-38d642673bf2,b9262583,46940,Auto,Other,Pending,Standard,Retired,688,79566.81,19673.33,0.022,42098,City_CA_4,CA,4.72,0.0,0.0,2022-02-05,
+28612179-8364-47fe-be68-7a8b75c015d3,b7f245b5,26424,Personal,Refinance,Approved,Standard,Self-Employed,663,54532.49,55000.0,0.07,36071,City_FL_18,FL,8.74,0.0,0.0,2022-08-18,2022-09-03
